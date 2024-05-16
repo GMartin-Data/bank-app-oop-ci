@@ -17,7 +17,7 @@ def main() -> None:
         session.add_all([account1, account2])
 
         # Accounts transfer (Note: commits all inside the method)
-        account1.transfer(other=account2, amount=50)  
+        account1.transfer(other=account2, amount=50)
 
     # Close all connections
     engine.dispose()

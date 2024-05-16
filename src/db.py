@@ -17,5 +17,7 @@ from .bank import Base
 
 def init_db_connection(debug=False):
     engine = create_engine("sqlite:///bank.db", echo=debug)
-    Base.metadata.create_all(engine)  # This always checks if table already exists beforehand
+    Base.metadata.create_all(
+        engine
+    )  # This always checks if table already exists beforehand
     return engine, sessionmaker(bind=engine)
