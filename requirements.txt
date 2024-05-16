@@ -1,0 +1,3 @@
+mock-alchemy<2
+pytest<9
+SQLAlchemy<3
