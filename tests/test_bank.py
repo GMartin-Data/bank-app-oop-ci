@@ -136,7 +136,7 @@ def test_transfer_normal(account_factory, my_session):
 def test_transfer_insufficient_funds(account_factory, my_session):
     with my_session:
         account1 = account_factory(account_id=1, balance=100)
-        account2 = account_factory(account_id=1, balance=50)
+        account2 = account_factory(account_id=2, balance=50)
         account1.transfer(account2, 200)
         # Checks
         # 1. Verify both accounts' balance remain unchanged
@@ -150,7 +150,7 @@ def test_transfer_insufficient_funds(account_factory, my_session):
 def test_transfer_negative_amount(account_factory, my_session):
     with my_session:
         account1 = account_factory(account_id=1, balance=100)
-        account2 = account_factory(account_id=1, balance=50)
+        account2 = account_factory(account_id=2, balance=50)
         account1.transfer(account2, -200)
         # Checks
         # 1. Verify both accounts' balance remain unchanged
@@ -164,7 +164,7 @@ def test_transfer_negative_amount(account_factory, my_session):
 def test_transfer_zero_amount(account_factory, my_session):
     with my_session:
         account1 = account_factory(account_id=1, balance=100)
-        account2 = account_factory(account_id=1, balance=50)
+        account2 = account_factory(account_id=2, balance=50)
         account1.transfer(account2, 0)
         # Checks
         # 1. Verify both accounts' balance remain unchanged
