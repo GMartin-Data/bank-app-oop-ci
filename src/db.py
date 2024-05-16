@@ -12,7 +12,7 @@ afterwards with `engine.dispose()`
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-from bank import Base
+from .bank import Base
 
 
 def init_db_connection(debug=False):

@@ -3,8 +3,8 @@ This script allows to play a simple scenario,
 to simulate the code workflow.
 """
 
-from bank import Account
-from db import init_db_connection
+from .bank import Account
+from .db import init_db_connection
 
 
 def main() -> None:
